@@ -14,3 +14,6 @@
 // 3 - Podemos gerar um arquivo de configuração automáticamente com o comando:
 // npx tsc --init
 
+// Seguindo desta forma, para podermos testar nosso código, nós sempre teremos que transpilar nosso código feito em TS para que o Node possa rodar o código em JS, mas temos um pacote para resolver isto e tornar o desenvolvimento um pouco mais ágil, que é o pacote ts-node-dev.
+// Para instalá-lo nós usamos o comando:
+// npm install ts-node-dev
