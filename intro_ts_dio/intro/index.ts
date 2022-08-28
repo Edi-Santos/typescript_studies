@@ -20,3 +20,10 @@
 
 // Agora nós podemos executar nosso arquivo TypeScript sem precisar fazer a transpilação. Para isto, usamos o comando:
 // npx ts-node-dev nomeDoArquivo.ts
+
+function somar(num: number) {
+  return num + 1;
+}
+
+console.log(somar(2));
+
