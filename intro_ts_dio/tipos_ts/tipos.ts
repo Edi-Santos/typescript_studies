@@ -7,3 +7,10 @@
 // void: tipo vazio (usado, por exemplo, em funções que não retornam valor nenhum)
 // null: tipo nulo
 // undefined: tipo indefinido
+
+const text: string = 'Meu pastel é mais barato.';
+const age: number = 25;
+const developer: boolean = true;
+const message = (): void => console.log('Eu prefiro morrer do que perder a vida.');
+const nulo: null = null;
+const indefinido: undefined = undefined;
