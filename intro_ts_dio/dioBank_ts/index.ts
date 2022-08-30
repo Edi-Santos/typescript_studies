@@ -9,3 +9,5 @@ class Conta {
     console.log('Bem vindo ao DIO Bank');
   }
 }
+
+const contaA: Conta = new Conta();
