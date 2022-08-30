@@ -1,3 +1,9 @@
+// Interface para usar no construtor da classe Conta
+interface IConta {
+  nomeTitular: string;
+  saldo?: number;
+}
+
 class Conta {
   private nomeTitular: string;
   private saldo: number;
