@@ -3,6 +3,8 @@
 interface IApresentation {
   name: string,
   born: number,
+  // Abaixo nós definimos um parâmetro opcional. O ponto de interrogação ao final indica ao TS que este não é um parâmetro obrigatório.
+  // Poderia ainda ser colocado diretamente dentro da função caso não estivéssemo usando interface.
   profession?: string,
 };
 
