@@ -15,3 +15,4 @@ function apresentation({ name, born, profession }: IApresentation): string {
 }
 
 console.log(apresentation({ name: 'Ed', born: 1997 }));
+console.log(apresentation({ name: 'Ed', born: 1997, profession: 'Desenvolvedor' }));
