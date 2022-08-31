@@ -28,8 +28,12 @@ class Conta {
   }
 
   saque = (value: number): void => {
-    this.saldo -= value;
-    console.log(`Você sacou R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
+    if (this.saldo >= value) {
+      this.saldo -= value;
+      return console.log(`Você sacou R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
+    }
+
+    return console.log(`Saldo insuficiente. Você tentou sacar R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
   };
 }
 
@@ -40,5 +44,6 @@ contaA.meuSaldo();
 contaA.deposito(20);
 contaA.deposito(20);
 contaA.saque(30);
+contaA.saque(20);
 
 // console.log(contaB);
