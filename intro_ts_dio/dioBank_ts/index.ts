@@ -26,6 +26,11 @@ class Conta {
     this.saldo += value;
     console.log(`Você depositou R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
   }
+
+  saque = (value: number): void => {
+    this.saldo -= value;
+    console.log(`Você sacou R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
+  };
 }
 
 const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
@@ -34,5 +39,6 @@ const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
 contaA.meuSaldo();
 contaA.deposito(20);
 contaA.deposito(20);
+contaA.saque(30);
 
 // console.log(contaB);
