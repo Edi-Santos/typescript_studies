@@ -7,6 +7,7 @@ interface IConta {
 class Conta {
   private nomeTitular: string;
   private saldo: number;
+  private active: boolean = true;
 
   constructor({
     nomeTitular,
