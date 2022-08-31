@@ -36,6 +36,8 @@ class Conta {
 
     return console.log(`Saldo insuficiente. Você tentou sacar R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
   };
+
+  cancelarConta = (): boolean => this.active = false;
 }
 
 const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
