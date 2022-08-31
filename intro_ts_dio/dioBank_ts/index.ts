@@ -18,10 +18,13 @@ class Conta {
 
     console.log('Bem vindo ao DIO Bank');
   }
+
+  // Método - Uma função que acessa e/ou altera valores de variáveis presentes na Classe
+  meuSaldo = (): number => this.saldo;
 }
 
 const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
-const contaB: Conta = new Conta({ nomeTitular: 'Roronoa Zoro', saldo: 100 });
+// const contaB: Conta = new Conta({ nomeTitular: 'Roronoa Zoro', saldo: 100 });
 
-console.log(contaA);
-console.log(contaB);
+console.log(contaA.meuSaldo());
+// console.log(contaB);
