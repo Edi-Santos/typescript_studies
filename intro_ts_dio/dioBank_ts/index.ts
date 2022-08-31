@@ -8,12 +8,19 @@ class Conta {
   private nomeTitular: string;
   private saldo: number;
 
-  constructor() {
-    this.nomeTitular = 'Ed';
-    this.saldo = 0;
+  constructor({
+    nomeTitular,
+    saldo = 0,
+  }: IConta) {
+    this.nomeTitular = nomeTitular;
+    this.saldo = saldo;
 
     console.log('Bem vindo ao DIO Bank');
   }
 }
 
-const contaA: Conta = new Conta();
+const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
+const contaB: Conta = new Conta({ nomeTitular: 'Roronoa Zoro', saldo: 100 });
+
+console.log(contaA);
+console.log(contaB);
