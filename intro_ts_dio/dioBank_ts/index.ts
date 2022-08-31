@@ -16,7 +16,7 @@ class Conta {
     this.nomeTitular = nomeTitular;
     this.saldo = saldo;
 
-    console.log('Bem vindo ao DIO Bank');
+    console.log(`Bem vindo ao DIO Bank, ${this.nomeTitular}`);
   }
 
   // Método - Uma função que acessa e/ou altera valores de variáveis presentes na Classe
