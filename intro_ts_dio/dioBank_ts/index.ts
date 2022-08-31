@@ -8,6 +8,7 @@ class Conta {
   private nomeTitular: string;
   private saldo: number;
   private active: boolean = true;
+  private statusConta: string = 'Ativo';
 
   constructor({
     nomeTitular,
@@ -37,7 +38,13 @@ class Conta {
     return console.log(`Saldo insuficiente. Você tentou sacar R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
   };
 
-  cancelarConta = (): boolean => this.active = false;
+  cancelarConta = (): void => {
+    this.active = false;
+
+    if (!this.active) this.statusConta = 'Desativado'
+
+    console.log(`${this.nomeTitular}, você cancelou sua conta. Status da conta: ${this.statusConta}`)
+  };
 }
 
 const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
@@ -48,5 +55,6 @@ contaA.deposito(20);
 contaA.deposito(20);
 contaA.saque(30);
 contaA.saque(20);
+contaA.cancelarConta();
 
 // console.log(contaB);
