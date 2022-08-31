@@ -10,6 +10,7 @@ class Conta {
 
   constructor({
     nomeTitular,
+    // Chamando saldo e informando um valor default(padrão)
     saldo = 0,
   }: IConta) {
     this.nomeTitular = nomeTitular;
