@@ -21,10 +21,18 @@ class Conta {
 
   // Método - Uma função que acessa e/ou altera valores de variáveis presentes na Classe
   meuSaldo = (): number => this.saldo;
+
+  deposito = (value: number): void => {
+    this.saldo += value;
+    console.log(`Você depositou R$${value},00. Seu saldo atual é de R$${this.saldo},00`);
+  }
 }
 
 const contaA: Conta = new Conta({ nomeTitular: 'Monkey D. Luffy' });
 // const contaB: Conta = new Conta({ nomeTitular: 'Roronoa Zoro', saldo: 100 });
 
 console.log(contaA.meuSaldo());
+contaA.deposito(20);
+contaA.deposito(20);
+
 // console.log(contaB);
